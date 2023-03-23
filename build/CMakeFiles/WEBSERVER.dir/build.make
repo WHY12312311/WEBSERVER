@@ -204,6 +204,7 @@ WEBSERVER: CMakeFiles/WEBSERVER.dir/src/Timer.cpp.o
 WEBSERVER: CMakeFiles/WEBSERVER.dir/src/main.cpp.o
 WEBSERVER: CMakeFiles/WEBSERVER.dir/src/others.cpp.o
 WEBSERVER: CMakeFiles/WEBSERVER.dir/build.make
+WEBSERVER: _deps/spdlog-build/libspdlogd.a
 WEBSERVER: CMakeFiles/WEBSERVER.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/why/Desktop/webserver_main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable WEBSERVER"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WEBSERVER.dir/link.txt --verbose=$(VERBOSE)

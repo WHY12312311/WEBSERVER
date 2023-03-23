@@ -129,6 +129,19 @@ WEBSERVER/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WEBSERVER.dir/build.make CMakeFiles/WEBSERVER.dir/build
 .PHONY : WEBSERVER/fast
 
+#=============================================================================
+# Target rules for targets named spdlog
+
+# Build rule for target.
+spdlog: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spdlog
+.PHONY : spdlog
+
+# fast build rule for target.
+spdlog/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/spdlog-build/CMakeFiles/spdlog.dir/build.make _deps/spdlog-build/CMakeFiles/spdlog.dir/build
+.PHONY : spdlog/fast
+
 src/Chanel.o: src/Chanel.cpp.o
 .PHONY : src/Chanel.o
 
@@ -330,6 +343,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... WEBSERVER"
+	@echo "... spdlog"
 	@echo "... src/Chanel.o"
 	@echo "... src/Chanel.i"
 	@echo "... src/Chanel.s"

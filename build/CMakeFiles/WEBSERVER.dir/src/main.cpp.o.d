@@ -263,6 +263,52 @@ CMakeFiles/WEBSERVER.dir/src/main.cpp.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/spdlog.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/common.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/tweakme.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/null_mutex.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/fmt/fmt.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/fmt/bundled/core.h \
+ /usr/include/c++/11/cstddef \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/fmt/bundled/format.h \
+ /usr/include/c++/11/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/tr1/gamma.tcc \
+ /usr/include/c++/11/tr1/special_function_util.h \
+ /usr/include/c++/11/tr1/bessel_function.tcc \
+ /usr/include/c++/11/tr1/beta_function.tcc \
+ /usr/include/c++/11/tr1/ell_integral.tcc \
+ /usr/include/c++/11/tr1/exp_integral.tcc \
+ /usr/include/c++/11/tr1/hypergeometric.tcc \
+ /usr/include/c++/11/tr1/legendre_function.tcc \
+ /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/11/tr1/poly_hermite.tcc \
+ /usr/include/c++/11/tr1/poly_laguerre.tcc \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/fmt/bundled/core.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/registry.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/periodic_worker.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/logger.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/log_msg.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/backtracer.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/circular_q.h \
+ /usr/include/c++/11/cassert /usr/include/assert.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/version.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/synchronous_factory.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/details/file_helper.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/sinks/base_sink.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/sinks/sink.h \
+ /home/why/Desktop/webserver_main/lib/spdlog/include/spdlog/formatter.h \
  /home/why/Desktop/webserver_main/./include/EventLoop.h \
  /usr/include/x86_64-linux-gnu/sys/epoll.h \
  /usr/include/x86_64-linux-gnu/bits/epoll.h \

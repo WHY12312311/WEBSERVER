@@ -352,7 +352,61 @@ CMakeFiles/WEBSERVER.dir/src/Chanel.cpp.o: ../src/Chanel.cpp \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/netinet/in.h \
-  /usr/include/x86_64-linux-gnu/bits/in.h
+  /usr/include/x86_64-linux-gnu/bits/in.h \
+  ../lib/spdlog/include/spdlog/spdlog.h \
+  ../lib/spdlog/include/spdlog/common.h \
+  ../lib/spdlog/include/spdlog/tweakme.h \
+  ../lib/spdlog/include/spdlog/details/null_mutex.h \
+  /usr/include/c++/11/atomic \
+  ../lib/spdlog/include/spdlog/fmt/fmt.h \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/11/cstddef \
+  ../lib/spdlog/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  ../lib/spdlog/include/spdlog/details/registry.h \
+  ../lib/spdlog/include/spdlog/details/periodic_worker.h \
+  /usr/include/c++/11/condition_variable \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  ../lib/spdlog/include/spdlog/logger.h \
+  ../lib/spdlog/include/spdlog/details/log_msg.h \
+  ../lib/spdlog/include/spdlog/details/backtracer.h \
+  ../lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+  ../lib/spdlog/include/spdlog/details/circular_q.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  ../lib/spdlog/include/spdlog/version.h \
+  ../lib/spdlog/include/spdlog/details/synchronous_factory.h \
+  ../lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  ../lib/spdlog/include/spdlog/details/file_helper.h \
+  ../lib/spdlog/include/spdlog/sinks/base_sink.h \
+  ../lib/spdlog/include/spdlog/sinks/sink.h \
+  ../lib/spdlog/include/spdlog/formatter.h
 
 CMakeFiles/WEBSERVER.dir/src/EventLoop.cpp.o: ../src/EventLoop.cpp \
   /usr/include/stdc-predef.h \
@@ -705,7 +759,61 @@ CMakeFiles/WEBSERVER.dir/src/EventLoop.cpp.o: ../src/EventLoop.cpp \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/netinet/in.h \
-  /usr/include/x86_64-linux-gnu/bits/in.h
+  /usr/include/x86_64-linux-gnu/bits/in.h \
+  ../lib/spdlog/include/spdlog/spdlog.h \
+  ../lib/spdlog/include/spdlog/common.h \
+  ../lib/spdlog/include/spdlog/tweakme.h \
+  ../lib/spdlog/include/spdlog/details/null_mutex.h \
+  /usr/include/c++/11/atomic \
+  ../lib/spdlog/include/spdlog/fmt/fmt.h \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/11/cstddef \
+  ../lib/spdlog/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  ../lib/spdlog/include/spdlog/details/registry.h \
+  ../lib/spdlog/include/spdlog/details/periodic_worker.h \
+  /usr/include/c++/11/condition_variable \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  ../lib/spdlog/include/spdlog/logger.h \
+  ../lib/spdlog/include/spdlog/details/log_msg.h \
+  ../lib/spdlog/include/spdlog/details/backtracer.h \
+  ../lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+  ../lib/spdlog/include/spdlog/details/circular_q.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  ../lib/spdlog/include/spdlog/version.h \
+  ../lib/spdlog/include/spdlog/details/synchronous_factory.h \
+  ../lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  ../lib/spdlog/include/spdlog/details/file_helper.h \
+  ../lib/spdlog/include/spdlog/sinks/base_sink.h \
+  ../lib/spdlog/include/spdlog/sinks/sink.h \
+  ../lib/spdlog/include/spdlog/formatter.h
 
 CMakeFiles/WEBSERVER.dir/src/Httpdata.cpp.o: ../src/Httpdata.cpp \
   /usr/include/stdc-predef.h \
@@ -1055,10 +1163,64 @@ CMakeFiles/WEBSERVER.dir/src/Httpdata.cpp.o: ../src/Httpdata.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
-  ../include/EventLoop.h \
-  /usr/include/c++/11/mutex \
+  ../lib/spdlog/include/spdlog/spdlog.h \
+  ../lib/spdlog/include/spdlog/common.h \
+  ../lib/spdlog/include/spdlog/tweakme.h \
+  ../lib/spdlog/include/spdlog/details/null_mutex.h \
+  /usr/include/c++/11/atomic \
+  ../lib/spdlog/include/spdlog/fmt/fmt.h \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/11/cstddef \
+  ../lib/spdlog/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  ../lib/spdlog/include/spdlog/details/registry.h \
+  ../lib/spdlog/include/spdlog/details/periodic_worker.h \
+  /usr/include/c++/11/condition_variable \
   /usr/include/c++/11/bits/std_mutex.h \
-  /usr/include/c++/11/bits/unique_lock.h
+  /usr/include/c++/11/bits/unique_lock.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  ../lib/spdlog/include/spdlog/logger.h \
+  ../lib/spdlog/include/spdlog/details/log_msg.h \
+  ../lib/spdlog/include/spdlog/details/backtracer.h \
+  ../lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+  ../lib/spdlog/include/spdlog/details/circular_q.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  ../lib/spdlog/include/spdlog/version.h \
+  ../lib/spdlog/include/spdlog/details/synchronous_factory.h \
+  ../lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  ../lib/spdlog/include/spdlog/details/file_helper.h \
+  ../lib/spdlog/include/spdlog/sinks/base_sink.h \
+  ../lib/spdlog/include/spdlog/sinks/sink.h \
+  ../lib/spdlog/include/spdlog/formatter.h \
+  ../include/EventLoop.h
 
 CMakeFiles/WEBSERVER.dir/src/Server.cpp.o: ../src/Server.cpp \
   /usr/include/stdc-predef.h \
@@ -1421,7 +1583,56 @@ CMakeFiles/WEBSERVER.dir/src/Server.cpp.o: ../src/Server.cpp \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/netinet/in.h \
-  /usr/include/x86_64-linux-gnu/bits/in.h
+  /usr/include/x86_64-linux-gnu/bits/in.h \
+  ../lib/spdlog/include/spdlog/spdlog.h \
+  ../lib/spdlog/include/spdlog/common.h \
+  ../lib/spdlog/include/spdlog/tweakme.h \
+  ../lib/spdlog/include/spdlog/details/null_mutex.h \
+  ../lib/spdlog/include/spdlog/fmt/fmt.h \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/11/cstddef \
+  ../lib/spdlog/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  ../lib/spdlog/include/spdlog/details/registry.h \
+  ../lib/spdlog/include/spdlog/details/periodic_worker.h \
+  ../lib/spdlog/include/spdlog/logger.h \
+  ../lib/spdlog/include/spdlog/details/log_msg.h \
+  ../lib/spdlog/include/spdlog/details/backtracer.h \
+  ../lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+  ../lib/spdlog/include/spdlog/details/circular_q.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  ../lib/spdlog/include/spdlog/version.h \
+  ../lib/spdlog/include/spdlog/details/synchronous_factory.h \
+  ../lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  ../lib/spdlog/include/spdlog/details/file_helper.h \
+  ../lib/spdlog/include/spdlog/sinks/base_sink.h \
+  ../lib/spdlog/include/spdlog/sinks/sink.h \
+  ../lib/spdlog/include/spdlog/formatter.h
 
 CMakeFiles/WEBSERVER.dir/src/ThreadPool.cpp.o: ../src/ThreadPool.cpp \
   /usr/include/stdc-predef.h \
@@ -2016,7 +2227,61 @@ CMakeFiles/WEBSERVER.dir/src/Timer.cpp.o: ../src/Timer.cpp \
   /usr/include/asm-generic/sockios.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/netinet/in.h \
-  /usr/include/x86_64-linux-gnu/bits/in.h
+  /usr/include/x86_64-linux-gnu/bits/in.h \
+  ../lib/spdlog/include/spdlog/spdlog.h \
+  ../lib/spdlog/include/spdlog/common.h \
+  ../lib/spdlog/include/spdlog/tweakme.h \
+  ../lib/spdlog/include/spdlog/details/null_mutex.h \
+  /usr/include/c++/11/atomic \
+  ../lib/spdlog/include/spdlog/fmt/fmt.h \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/11/cstddef \
+  ../lib/spdlog/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  ../lib/spdlog/include/spdlog/details/registry.h \
+  ../lib/spdlog/include/spdlog/details/periodic_worker.h \
+  /usr/include/c++/11/condition_variable \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  ../lib/spdlog/include/spdlog/logger.h \
+  ../lib/spdlog/include/spdlog/details/log_msg.h \
+  ../lib/spdlog/include/spdlog/details/backtracer.h \
+  ../lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+  ../lib/spdlog/include/spdlog/details/circular_q.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  ../lib/spdlog/include/spdlog/version.h \
+  ../lib/spdlog/include/spdlog/details/synchronous_factory.h \
+  ../lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  ../lib/spdlog/include/spdlog/details/file_helper.h \
+  ../lib/spdlog/include/spdlog/sinks/base_sink.h \
+  ../lib/spdlog/include/spdlog/sinks/sink.h \
+  ../lib/spdlog/include/spdlog/formatter.h
 
 CMakeFiles/WEBSERVER.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -2353,6 +2618,55 @@ CMakeFiles/WEBSERVER.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/in.h \
+  ../lib/spdlog/include/spdlog/spdlog.h \
+  ../lib/spdlog/include/spdlog/common.h \
+  ../lib/spdlog/include/spdlog/tweakme.h \
+  ../lib/spdlog/include/spdlog/details/null_mutex.h \
+  ../lib/spdlog/include/spdlog/fmt/fmt.h \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/11/cstddef \
+  ../lib/spdlog/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  ../lib/spdlog/include/spdlog/details/registry.h \
+  ../lib/spdlog/include/spdlog/details/periodic_worker.h \
+  ../lib/spdlog/include/spdlog/logger.h \
+  ../lib/spdlog/include/spdlog/details/log_msg.h \
+  ../lib/spdlog/include/spdlog/details/backtracer.h \
+  ../lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+  ../lib/spdlog/include/spdlog/details/circular_q.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  ../lib/spdlog/include/spdlog/version.h \
+  ../lib/spdlog/include/spdlog/details/synchronous_factory.h \
+  ../lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  ../lib/spdlog/include/spdlog/details/file_helper.h \
+  ../lib/spdlog/include/spdlog/sinks/base_sink.h \
+  ../lib/spdlog/include/spdlog/sinks/sink.h \
+  ../lib/spdlog/include/spdlog/formatter.h \
   ../include/EventLoop.h \
   /usr/include/x86_64-linux-gnu/sys/epoll.h \
   /usr/include/x86_64-linux-gnu/bits/epoll.h \
@@ -2708,7 +3022,64 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
   /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h
+  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
+  ../lib/spdlog/include/spdlog/spdlog.h \
+  ../lib/spdlog/include/spdlog/common.h \
+  ../lib/spdlog/include/spdlog/tweakme.h \
+  ../lib/spdlog/include/spdlog/details/null_mutex.h \
+  /usr/include/c++/11/atomic \
+  ../lib/spdlog/include/spdlog/fmt/fmt.h \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  /usr/include/c++/11/cstddef \
+  ../lib/spdlog/include/spdlog/fmt/bundled/format.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  ../lib/spdlog/include/spdlog/fmt/bundled/core.h \
+  ../lib/spdlog/include/spdlog/details/registry.h \
+  ../lib/spdlog/include/spdlog/details/periodic_worker.h \
+  /usr/include/c++/11/condition_variable \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  ../lib/spdlog/include/spdlog/logger.h \
+  ../lib/spdlog/include/spdlog/details/log_msg.h \
+  ../lib/spdlog/include/spdlog/details/backtracer.h \
+  ../lib/spdlog/include/spdlog/details/log_msg_buffer.h \
+  ../lib/spdlog/include/spdlog/details/circular_q.h \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  ../lib/spdlog/include/spdlog/version.h \
+  ../lib/spdlog/include/spdlog/details/synchronous_factory.h \
+  ../lib/spdlog/include/spdlog/sinks/basic_file_sink.h \
+  ../lib/spdlog/include/spdlog/details/file_helper.h \
+  ../lib/spdlog/include/spdlog/sinks/base_sink.h \
+  ../lib/spdlog/include/spdlog/sinks/sink.h \
+  ../lib/spdlog/include/spdlog/formatter.h
 
 
 ../src/others.cpp:
@@ -2717,13 +3088,63 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 ../src/Timer.cpp:
 
-/usr/include/c++/11/atomic:
-
 ../include/ThreadPool.h:
+
+../src/Httpdata.cpp:
+
+../lib/spdlog/include/spdlog/formatter.h:
+
+../lib/spdlog/include/spdlog/sinks/base_sink.h:
+
+/usr/include/assert.h:
+
+/usr/include/c++/11/cassert:
+
+../lib/spdlog/include/spdlog/details/log_msg_buffer.h:
+
+../lib/spdlog/include/spdlog/details/backtracer.h:
+
+../lib/spdlog/include/spdlog/details/registry.h:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
+/usr/include/c++/11/tr1/poly_hermite.tcc:
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
 
 ../src/Server.cpp:
 
-../src/Httpdata.cpp:
+/usr/include/c++/11/tr1/ell_integral.tcc:
+
+/usr/include/c++/11/tr1/bessel_function.tcc:
+
+/usr/include/c++/11/bits/specfun.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+../lib/spdlog/include/spdlog/fmt/bundled/core.h:
+
+../lib/spdlog/include/spdlog/fmt/fmt.h:
+
+/usr/include/c++/11/atomic:
+
+../lib/spdlog/include/spdlog/details/null_mutex.h:
+
+../lib/spdlog/include/spdlog/tweakme.h:
+
+../lib/spdlog/include/spdlog/common.h:
 
 /usr/include/netinet/in.h:
 
@@ -2744,6 +3165,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/c++/11/bits/regex_error.h:
 
 /usr/include/c++/11/bits/regex_constants.h:
+
+../lib/spdlog/include/spdlog/logger.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
 
@@ -2799,6 +3222,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
 
+../lib/spdlog/include/spdlog/details/synchronous_factory.h:
+
 /usr/include/c++/11/bits/locale_facets_nonio.h:
 
 /usr/include/c++/11/bits/stream_iterator.h:
@@ -2810,6 +3235,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/c++/11/optional:
 
 ../include/others.h:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/11/bits/std_mutex.h:
 
@@ -2836,6 +3263,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/linux/posix_types.h:
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
+
+../lib/spdlog/include/spdlog/details/file_helper.h:
 
 /usr/include/c++/11/deque:
 
@@ -2869,6 +3298,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/c++/11/bits/locale_classes.h:
 
+../lib/spdlog/include/spdlog/version.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
@@ -2876,6 +3307,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
+
+../lib/spdlog/include/spdlog/details/log_msg.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
@@ -2945,6 +3378,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
+../lib/spdlog/include/spdlog/details/circular_q.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/wchar.h:
@@ -2987,7 +3422,11 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
+/usr/include/c++/11/tr1/gamma.tcc:
+
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/c++/11/iostream:
 
@@ -3011,6 +3450,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/x86_64-linux-gnu/sys/epoll.h:
 
+../lib/spdlog/include/spdlog/sinks/sink.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
@@ -3026,6 +3467,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
+
+/usr/include/c++/11/cmath:
 
 /usr/include/c++/11/bits/allocator.h:
 
@@ -3056,6 +3499,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/bits/ostream_insert.h:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
@@ -3092,6 +3537,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/c++/11/bits/nested_exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/math.h:
 
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
 
@@ -3131,6 +3578,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/c++/11/list:
 
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -3146,6 +3595,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/c++/11/typeinfo:
+
+../lib/spdlog/include/spdlog/sinks/basic_file_sink.h:
 
 /usr/include/c++/11/bits/move.h:
 
@@ -3199,6 +3650,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+/usr/include/c++/11/tr1/special_function_util.h:
+
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -3206,6 +3659,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/alloca.h:
+
+../lib/spdlog/include/spdlog/spdlog.h:
 
 /usr/include/c++/11/cstdio:
 
@@ -3246,6 +3701,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/system_error:
+
+/usr/include/c++/11/cstddef:
 
 /usr/include/c++/11/bits/stl_vector.h:
 
@@ -3289,6 +3746,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/c++/11/bits/locale_facets.tcc:
 
+../lib/spdlog/include/spdlog/details/periodic_worker.h:
+
 /usr/include/c++/11/istream:
 
 /usr/include/c++/11/bits/regex_scanner.h:
@@ -3327,11 +3786,15 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/c++/11/bits/stl_relops.h:
 
+/usr/include/c++/11/tr1/beta_function.tcc:
+
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/bits/unique_lock.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 /usr/include/x86_64-linux-gnu/bits/in.h:
 
@@ -3373,6 +3836,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
+../lib/spdlog/include/spdlog/fmt/bundled/format.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
@@ -3400,6 +3865,8 @@ CMakeFiles/WEBSERVER.dir/src/others.cpp.o: ../src/others.cpp \
 /usr/include/c++/11/bits/stl_function.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/c++/11/bits/stl_list.h:
 

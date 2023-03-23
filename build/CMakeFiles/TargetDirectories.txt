@@ -1,3 +1,6 @@
 /home/why/Desktop/webserver_main/build/CMakeFiles/WEBSERVER.dir
 /home/why/Desktop/webserver_main/build/CMakeFiles/edit_cache.dir
 /home/why/Desktop/webserver_main/build/CMakeFiles/rebuild_cache.dir
+/home/why/Desktop/webserver_main/build/_deps/spdlog-build/CMakeFiles/spdlog.dir
+/home/why/Desktop/webserver_main/build/_deps/spdlog-build/CMakeFiles/edit_cache.dir
+/home/why/Desktop/webserver_main/build/_deps/spdlog-build/CMakeFiles/rebuild_cache.dir

@@ -1,42 +1,77 @@
 [
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Chanel.cpp.o -c /home/why/Desktop/webserver_main/src/Chanel.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Chanel.cpp.o -c /home/why/Desktop/webserver_main/src/Chanel.cpp",
   "file": "/home/why/Desktop/webserver_main/src/Chanel.cpp"
 },
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/EventLoop.cpp.o -c /home/why/Desktop/webserver_main/src/EventLoop.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/EventLoop.cpp.o -c /home/why/Desktop/webserver_main/src/EventLoop.cpp",
   "file": "/home/why/Desktop/webserver_main/src/EventLoop.cpp"
 },
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Httpdata.cpp.o -c /home/why/Desktop/webserver_main/src/Httpdata.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Httpdata.cpp.o -c /home/why/Desktop/webserver_main/src/Httpdata.cpp",
   "file": "/home/why/Desktop/webserver_main/src/Httpdata.cpp"
 },
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Server.cpp.o -c /home/why/Desktop/webserver_main/src/Server.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Server.cpp.o -c /home/why/Desktop/webserver_main/src/Server.cpp",
   "file": "/home/why/Desktop/webserver_main/src/Server.cpp"
 },
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/ThreadPool.cpp.o -c /home/why/Desktop/webserver_main/src/ThreadPool.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/ThreadPool.cpp.o -c /home/why/Desktop/webserver_main/src/ThreadPool.cpp",
   "file": "/home/why/Desktop/webserver_main/src/ThreadPool.cpp"
 },
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Timer.cpp.o -c /home/why/Desktop/webserver_main/src/Timer.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/Timer.cpp.o -c /home/why/Desktop/webserver_main/src/Timer.cpp",
   "file": "/home/why/Desktop/webserver_main/src/Timer.cpp"
 },
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/main.cpp.o -c /home/why/Desktop/webserver_main/src/main.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/main.cpp.o -c /home/why/Desktop/webserver_main/src/main.cpp",
   "file": "/home/why/Desktop/webserver_main/src/main.cpp"
 },
 {
   "directory": "/home/why/Desktop/webserver_main/build",
-  "command": "/usr/bin/g++  -I/home/why/Desktop/webserver_main/./include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/others.cpp.o -c /home/why/Desktop/webserver_main/src/others.cpp",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/WEBSERVER.dir/src/others.cpp.o -c /home/why/Desktop/webserver_main/src/others.cpp",
   "file": "/home/why/Desktop/webserver_main/src/others.cpp"
+},
+{
+  "directory": "/home/why/Desktop/webserver_main/build/_deps/spdlog-build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/spdlog.dir/src/spdlog.cpp.o -c /home/why/Desktop/webserver_main/lib/spdlog/src/spdlog.cpp",
+  "file": "/home/why/Desktop/webserver_main/lib/spdlog/src/spdlog.cpp"
+},
+{
+  "directory": "/home/why/Desktop/webserver_main/build/_deps/spdlog-build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/spdlog.dir/src/stdout_sinks.cpp.o -c /home/why/Desktop/webserver_main/lib/spdlog/src/stdout_sinks.cpp",
+  "file": "/home/why/Desktop/webserver_main/lib/spdlog/src/stdout_sinks.cpp"
+},
+{
+  "directory": "/home/why/Desktop/webserver_main/build/_deps/spdlog-build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/spdlog.dir/src/color_sinks.cpp.o -c /home/why/Desktop/webserver_main/lib/spdlog/src/color_sinks.cpp",
+  "file": "/home/why/Desktop/webserver_main/lib/spdlog/src/color_sinks.cpp"
+},
+{
+  "directory": "/home/why/Desktop/webserver_main/build/_deps/spdlog-build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/spdlog.dir/src/file_sinks.cpp.o -c /home/why/Desktop/webserver_main/lib/spdlog/src/file_sinks.cpp",
+  "file": "/home/why/Desktop/webserver_main/lib/spdlog/src/file_sinks.cpp"
+},
+{
+  "directory": "/home/why/Desktop/webserver_main/build/_deps/spdlog-build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/spdlog.dir/src/async.cpp.o -c /home/why/Desktop/webserver_main/lib/spdlog/src/async.cpp",
+  "file": "/home/why/Desktop/webserver_main/lib/spdlog/src/async.cpp"
+},
+{
+  "directory": "/home/why/Desktop/webserver_main/build/_deps/spdlog-build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/spdlog.dir/src/cfg.cpp.o -c /home/why/Desktop/webserver_main/lib/spdlog/src/cfg.cpp",
+  "file": "/home/why/Desktop/webserver_main/lib/spdlog/src/cfg.cpp"
+},
+{
+  "directory": "/home/why/Desktop/webserver_main/build/_deps/spdlog-build",
+  "command": "/usr/bin/g++ -DSPDLOG_COMPILED_LIB -I/home/why/Desktop/webserver_main/./include -I/home/why/Desktop/webserver_main/lib/spdlog/include -pthread -g -g -o CMakeFiles/spdlog.dir/src/bundled_fmtlib_format.cpp.o -c /home/why/Desktop/webserver_main/lib/spdlog/src/bundled_fmtlib_format.cpp",
+  "file": "/home/why/Desktop/webserver_main/lib/spdlog/src/bundled_fmtlib_format.cpp"
 }
 ]
