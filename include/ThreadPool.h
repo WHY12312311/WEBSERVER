@@ -19,6 +19,7 @@ public:
     template<class F, class... Args>        // 向工作队列中加入任务
         auto Addtask(F &&f, Args &&...args)
         ->std::future<typename std::result_of<F(Args...)>::type>;
+    void Stop_thread()   {isStop = true;}
     
 private:
     typedef std::function<void()> task;     // 将task定义为一类没有输出没有输入的函数

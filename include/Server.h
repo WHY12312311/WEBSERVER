@@ -6,6 +6,7 @@
 #include <mutex>
 #include <typeinfo>
 #include <queue>
+#include <new>
 
 #include "ThreadPool.h"
 #include "EventLoop.h"

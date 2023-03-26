@@ -15,6 +15,8 @@
 #include <time.h>
 #include <signal.h>
 
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/basic_file_sink.h"
 
 // 定义一些全局变量
 class GlobalValue{
@@ -53,5 +55,8 @@ std::string GetTime();
 
 // 辅助注册信号处理函数
 void Sig_register(int signum, void(handler)(int));
+
+// 生成唯一的logger对象，这个地方给一个默认参数是为了后面不带参数的运行
+std::shared_ptr<spdlog::logger> Getlogger(std::string path = "./log/log.txt"); 
 
 #endif

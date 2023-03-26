@@ -40,6 +40,7 @@ ThreadPool::ThreadPool(size_t size):isStop(false)
                 tsk();
             }
         });
+        pool.back().detach();   // 设置自动回收
     }
 }
 
@@ -52,10 +53,9 @@ ThreadPool::~ThreadPool(){
     }
 
     cond.notify_all();
-    std::cout << "Thread joined......" << std::endl;
 
-    // 回收子线程
-    for (auto& thread : pool){  // 这里注意要使用引用，要不然因为没有合适的拷贝构造函数是不能用的。
-        thread.join();
-    }
+    // // 回收子线程
+    // for (auto& thread : pool){  // 这里注意要使用引用，要不然因为没有合适的拷贝构造函数是不能用的。
+    //     thread.join();
+    // }
 }

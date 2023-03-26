@@ -69,7 +69,7 @@ void HttpData::Call_register(Chanel* chanel){
 
 void HttpData::Callback_read(){
     if (!curr_ch){
-        std::cout << "No chanel for reading!" << std::endl;
+        Getlogger()->warn("No chanel for reading!");
         return;
     }
     bytes_read = Read_data(curr_ch->Get_fd(), read_buf, is_conn);
@@ -110,9 +110,9 @@ void HttpData::Callback_write(){
 }
 
 void HttpData::Callback_disconn(){
-    std::cout << curr_ch->Get_fd() << ": Disconnecting..........." << std::endl;
+    Getlogger()->info("{}: Disconnecting...........", curr_ch->Get_fd());
     if (!curr_ch){
-        std::cout << "No chanel for reading!" << std::endl;
+        Getlogger()->warn("No chanel for reading!");
         return;
     }
     // 时间轮在该函数之中也删除掉了
@@ -122,7 +122,7 @@ void HttpData::Callback_disconn(){
 void HttpData::Callback_error(){
     if (errno == 0) // 这个时候要么是报假警，要么就是已经处理过了，直接跳过
         return;
-    perror("Connection error");
+    Getlogger()->error("Http connection error: {}", strerror(errno));
     Callback_disconn();
 }
 
@@ -214,7 +214,7 @@ void HttpData::State_machine(){
 
             case check_state_analyse_content: {
                 if (!map.count("method")){
-                    std::cout << "No method in this http data!" << std::endl;
+                    Getlogger()->warn("No method in this http data!");
                     return;
                 }
 
@@ -310,7 +310,7 @@ void HttpData::Set_HttpErrorMessage(int fd,int err_no,std::string msg){
     write_buf.clear();
 
     // 先输出一手错误信息
-    std::cout << fd << " has a http error" << err_no << ": " << msg << std::endl;
+    Getlogger()->error("{}: Http error {} {}", fd, err_no, msg);
     // printf("%d has a http error %d: %s", fd, err_no, msg);
 
     // 写输出报文到写缓冲区，使用html语言来写，这部分写的不精细，浏览器就会不显示结果
@@ -351,7 +351,7 @@ sub_state_ParseHTTP HttpData::Analyse_GetOrHead(){
     else                            file_type = SourceMap::Get_filetype(filename.substr(pos));
 
     if (file_type.empty()){ // 解析类型出错
-        std::cout <<  filename.substr(pos) <<": No such a file type!" << std::endl;
+        Getlogger()->warn("{}: No such a file type!", filename.substr(pos));
         Set_HttpErrorMessage(curr_ch->Get_fd(), 404, "not found");
         return analyse_error;
     }
@@ -360,7 +360,7 @@ sub_state_ParseHTTP HttpData::Analyse_GetOrHead(){
     // 解析文件大小
     struct stat file_info;
     if (stat(path.c_str(), &file_info) < 0){
-        std::cout << curr_ch->Get_fd() << ": file not found" << std::endl;
+        Getlogger()->warn("{}: file not found", curr_ch->Get_fd());
         Set_HttpErrorMessage(curr_ch->Get_fd(), 404, "not found");
         return analyse_error;
     }
@@ -381,7 +381,7 @@ sub_state_ParseHTTP HttpData::Analyse_GetOrHead(){
     close(file_fd); // 创建完内存映射就可以关上了
 
     if (addr == (void*)-1){ // 内存映射创建失败
-        std::cout << file_fd << ": error mmapping!" << std::endl;
+        Getlogger()->error("{}: error mmapping!", file_fd);
         munmap(addr, file_size);
         Set_HttpErrorMessage(curr_ch->Get_fd(), 404, "not found");
         return analyse_error;

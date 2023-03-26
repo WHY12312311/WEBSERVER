@@ -11,7 +11,7 @@ Timer::Timer(size_t pos, size_t turns, HttpData* _http):PosInWheel(pos), Turns(t
 
 void Timer::DoCallback(){
     if (FuncOfTimeUp)   FuncOfTimeUp();
-    else std::cout << "No Callback function!" << std::endl;
+    else    Getlogger()->warn("No Callback function!");
 }
 
 // TimeWheel类
@@ -24,7 +24,7 @@ TimeWheel::TimeWheel(int _epollfd, size_t maxsize):epollfd(_epollfd), SizeOfWhee
     // 创建一个管道用于时间轮的tick
     int pipefd = pipe(tick_d);
     if (pipefd == -1){
-        std::cout << "TimeWheel create pipe error" << std::endl;
+        Getlogger()->error("TimeWheel create pipe error");
         exit(-1);
     }
     // std::cout << tick_d[0] << " " << tick_d[1] << std::endl;
@@ -34,7 +34,7 @@ TimeWheel::TimeWheel(int _epollfd, size_t maxsize):epollfd(_epollfd), SizeOfWhee
 
     // 创建Chanel，注意这个管道是监听的0。
     tick_chanel = new Chanel(tick_d[0], epollfd, false, nullptr);
-    tick_chanel->Set_events(EPOLLIN);
+    // tick_chanel->Set_events(EPOLLIN);
     // 原来在这等着我呢，这个地方定义了每一次监听到管道读事件就tick一下
         // 后面是一个lambda表达式，[=]代表的是自动推导捕获列表
     tick_chanel->HandlerRegister(Chanel::H_READ, [=]{Tw_callback();});
@@ -71,7 +71,7 @@ Timer* TimeWheel::TimeWheel_insert(std::chrono::seconds timeout, HttpData* http)
 }
 
 bool TimeWheel::TimeWheel_remove(Timer* timer){
-    if(!timer)  return false;
+    if(!timer || timer->PosInWheel >= slot.size())  return false;
     // remove函数根据值来删除，自动查找相同的值并都删掉
     slot[timer->PosInWheel].remove(timer);
     delete timer;   // timer都是使用new定义的，所以必须给delete掉
@@ -119,7 +119,9 @@ void TimeWheel::tick(){
     if (todoList.size()){
         int res = write(tick_d[1], "pipe\0", sizeof "pipe\0");
         if (res < 0){
+            Getlogger()->error("Write to timewheel pipe error: {}", strerror(errno));
             perror("write");
+            return;
         }
     }
 }
@@ -128,7 +130,6 @@ void TimeWheel::Tw_callback(){
     // 需要先读入管道中的数据，防止积攒过多堵住
     std::string buf{};
     read(tick_d[0], (void*)buf.c_str(), 100);   // 由于每次写入的很少，这里就定量100字节读了
-    std::cout << buf << std::endl;
 
     // 每一个到时的计时器都调用超市回调函数
     for (auto itr : todoList){

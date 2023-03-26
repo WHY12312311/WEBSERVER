@@ -71,7 +71,6 @@ CMakeFiles/spdlog-populate: CMakeFiles/spdlog-populate-complete
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download
-CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build
@@ -81,9 +80,6 @@ CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-
 	/usr/bin/cmake -E make_directory /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/CMakeFiles
 	/usr/bin/cmake -E touch /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate-complete
 	/usr/bin/cmake -E touch /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-done
-
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update:
-.PHONY : spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
 
 spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'spdlog-populate'"
@@ -118,22 +114,15 @@ spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir:
 	/usr/bin/cmake -E make_directory /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp
 	/usr/bin/cmake -E touch /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir
 
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
+spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'spdlog-populate'"
 	/usr/bin/cmake -E echo_append
 	/usr/bin/cmake -E touch /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch
-
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update:
-.PHONY : spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
 
 spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'spdlog-populate'"
 	cd /home/why/Desktop/webserver_main/build/_deps/spdlog-build && /usr/bin/cmake -E echo_append
 	cd /home/why/Desktop/webserver_main/build/_deps/spdlog-build && /usr/bin/cmake -E touch /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test
-
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'spdlog-populate'"
-	cd /home/why/Desktop/webserver_main/lib/spdlog && /usr/bin/cmake -P /home/why/Desktop/webserver_main/build/_deps/spdlog-subbuild/spdlog-populate-prefix/tmp/spdlog-populate-gitupdate.cmake
 
 spdlog-populate: CMakeFiles/spdlog-populate
 spdlog-populate: CMakeFiles/spdlog-populate-complete
@@ -144,7 +133,6 @@ spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populat
 spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir
 spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch
 spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test
-spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
 spdlog-populate: CMakeFiles/spdlog-populate.dir/build.make
 .PHONY : spdlog-populate
 

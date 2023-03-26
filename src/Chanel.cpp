@@ -30,22 +30,19 @@ void Chanel::Callrevents(){
         // 需要特别注意处理这几个事件的顺序，有的版本中在发送EPOLLRDHUP的时候会同时发送
         // 一个EPOLLIN，如果先处理EPOLLIN就有可能会出现内存泄漏，因为这时候已经半关闭了
     if (revents & EPOLLERR){
-        // std::cout << "EPOLLERR" << std::endl;
         CallHandler(H_ERROR);
     }
     
     else if (revents & EPOLLHUP || revents & EPOLLRDHUP){    // bug：每一次收发请求之后都会触发EPOLLRDHUP，致使没有长连接存在
-        std::cout << "Client closed........" << std::endl;
+        Getlogger()->info("{}: Client closed.....", fd);
         CallHandler(H_DISCONN);
     }
         
     else if (revents & EPOLLIN){
-        // std::cout << "EPOLLIN" << std::endl;
         CallHandler(H_READ);
     }
 
     else if (revents & EPOLLOUT){
-        // std::cout << "EPOLLOUT" << std::endl;
         CallHandler(H_WRITE);
     }
 }
@@ -57,38 +54,37 @@ void Chanel::CallHandler(handler_enum Hnum){
             if (read_handle != nullptr){
                 read_handle();
             }else {
-                std::cout << "No read handler for this chanel!" << std::endl;
-                exit(-1);
+                Getlogger()->error("No read handler for this chanel!");
+                return;
             }
             break;
         case H_WRITE:
             if (write_handle != nullptr){
                 write_handle();
             }else {
-                std::cout << "No write handler for this chanel!" << std::endl;
-                exit(-1);
+                Getlogger()->error("No write handler for this chanel!");
+                return;
             }
             break;
         case H_ERROR:
             if (error_handle != nullptr){
                 error_handle();
             }else {
-                std::cout << "No error handler for this chanel!" << std::endl;
-                exit(-1);
+                Getlogger()->error("No error handler for this chanel!");
+                return;
             }
             break;
         case H_DISCONN:
             if (disconn_handle != nullptr){
                 disconn_handle();
             }else {
-                std::cout << "No disconnect handler for this chanel!" << std::endl;
-                exit(-1);
+                Getlogger()->error("No disconnect handler for this chanel!");
+                return;
             }
             break;
         default:
-            std::cout << "No such a enum!" << std::endl;
-            exit(-1);
-            break;
+            Getlogger()->error("No such a enum!");
+            return;
     }
 }
 
@@ -107,10 +103,34 @@ void Chanel::HandlerRegister(handler_enum Hnum, CALLBACK fun){
             disconn_handle = std::move(fun);
             break;
         default:
-            std::cout << "No such a enum!" << std::endl;
+            Getlogger()->error("No such a enum!");
             exit(-1);
     }
 }
+
+void Chanel::Set_Epoll(){
+        // 如果该文件描述符已经被关闭了，则不进行处理
+        // 由于在处理epoll请求的时候有删除epoll这一条
+        // 而删除之后还是在这个数组中，可能会导致bug
+        // 这个地方出bug的好像都是时间轮的chanel，难搞的很
+        // if (fcntl(fd, F_GETFD) == -1 || fcntl(epollfd, F_GETFD) == -1)
+        //     return;
+        epoll_event ev;
+        ev.data.fd = fd;
+        ev.events = events;
+        int ret = 0;
+        if (!is_events){
+            is_events = true;
+            ret = epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &ev);
+        }
+        else 
+            ret = epoll_ctl(epollfd, EPOLL_CTL_MOD, fd, &ev);
+        if (ret < 0){
+            Getlogger()->error("Set epoll events error: {}, epollfd = {}, fd = {}", strerror(errno), epollfd, fd);
+            return;
+        }
+        // Getlogger()->info("epollfd = {}, fd = {}", epollfd, fd);
+    }
 
 
 void Chanel::Set_events_out(bool isout){

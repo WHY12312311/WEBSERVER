@@ -6,13 +6,18 @@
 EventLoop::EventLoop(bool ismain):isMainReactor(ismain) {
     // 注册epoll监听事件
     if ((epollfd = epoll_create(1)) < 0){
-        perror("epoll_create");
+        Getlogger()->error("Creat epoll error: {}", strerror(errno));
         exit(-1);
     }
     
     // http_data = new HttpData(this);
     Conn_num = 0;
     stop = false;
+
+    // 主reactor会造成一系列bug，但实际上无关紧要，考虑一下要不要保留
+    // // 主reactor是不需要时间轮的
+    // if (isMainReactor)
+    //     return;
 
     time_wheel = new TimeWheel(epollfd);
 
@@ -21,8 +26,8 @@ EventLoop::EventLoop(bool ismain):isMainReactor(ismain) {
 }
 
 EventLoop::~EventLoop(){
-    close(epollfd);
     delete time_wheel;
+    close(epollfd);
     // delete http_data;
     // 其他成员变量都有自己的析构函数
 }
@@ -30,7 +35,7 @@ EventLoop::~EventLoop(){
 // 向当前的loop中添加新的监听
 bool EventLoop::AddChanel(Chanel* CHNL){
     if (!CHNL){
-        std::cout << "Fail to add chanel!" << std::endl;
+        Getlogger()->error("Fail to add chanel!");
         return false;
     }
 
@@ -73,7 +78,7 @@ bool EventLoop::AddChanel(Chanel* CHNL){
 
 bool EventLoop::ModChanel(Chanel* CHNL, __uint32_t EV){
     if (!CHNL){
-        std::cout << "Fail to modify chanel!" << std::endl;
+        Getlogger()->error("Fail to modify chanel!");
         return false;
     }
 
@@ -89,8 +94,8 @@ bool EventLoop::ModChanel(Chanel* CHNL, __uint32_t EV){
 }
 
 bool EventLoop::DelChanel(Chanel* CHNL){
-    if (!CHNL){
-        std::cout << "Fail to delete chanel!" << std::endl;
+    if (!CHNL || !time_wheel){
+        Getlogger()->error("Fail to delete chanel!");
         return false;
     }
 
@@ -100,14 +105,21 @@ bool EventLoop::DelChanel(Chanel* CHNL){
     // 删除epoll中的注册
     int ret = epoll_ctl(epollfd, EPOLL_CTL_DEL, CHNL->Get_fd(), NULL);
     if (ret < 0){
-        perror("epoll delete");
+        Getlogger()->error("Delete epoll fd error: {}", strerror(errno));
         return false;
     }
     // 清除其占用的资源
-    chanelpool[CHNL->Get_fd()] = nullptr;
-    CHNL->~Chanel(); // 这个地方应该直接析构就可以了，也不打算复用信道
-    if (typeid(CHNL) == typeid(void))   // 如果是由new动态分配的则使用delete删除掉
-        delete CHNL;
+    int fd = CHNL->Get_fd();
+    delete chanelpool[fd];
+    chanelpool[fd] = nullptr;
+    // BUG：使用下面两种释放内存的方法都不可以正确地释放内存，不知道为什么
+
+    // delete CHNL; // 现在都是new出来的chanel了，不需要进行判断
+    // CHNL->~Chanel(); // 这个地方应该直接析构就可以了，也不打算复用信道
+    // // 由于创建的Chanel有的地方用的是new，有的地方又不是，所以需要先判断是不是new出来的再删除
+    // // 如果对堆上存储的指针delete则会报错
+    // if (typeid(CHNL) == typeid(void))   // 如果是由new动态分配的则使用delete删除掉
+    //     delete CHNL;    // 另外，实际上delete函数会自动调用类的析构函数。
     
     // 计数，删除要减一
     --Conn_num;
@@ -125,11 +137,7 @@ void EventLoop::StartLoop(){
 }
 
 void EventLoop::StopLoop(){
-    stop = false;
-    // 销毁所有chanel
-    for (auto itr : chanelpool){
-        DelChanel(itr);
-    }
+    stop = true;
 }
 
 void EventLoop::ListenNCall(){
@@ -138,7 +146,7 @@ void EventLoop::ListenNCall(){
         // 阻塞地监听，并设置超时时间
         int res_num = epoll_wait(epollfd, events, MaxEvent, Epoll_timeout);
         if (res_num == 0){
-            std::cout << "Epoll timout!" << std::endl;
+            Getlogger()->warn("Epoll timout........");
             continue;
         }else if (res_num < 0){
             perror("epoll_wait");
@@ -152,11 +160,25 @@ void EventLoop::ListenNCall(){
                 currchanel->Set_revents(events[i].events);
                 currchanel->Callrevents();
                 // 在调用完操作函数之后就需要重置EPOLLONTSHOT事件
-                currchanel->Set_oneshot();
+                    // 注意：需要判断这个chanel是否被释放掉了
+                if (chanelpool[currfd])
+                    chanelpool[currfd]->Set_oneshot();
             }
             else {
-                std::cout << i << ": no related chanel for this fd!" << std::endl;
+                Getlogger()->warn("{}: no related chanel for this fd!", i);
             }
         }
+        // 及时写入日志
+        // Getlogger()->flush();
+    }
+    // 关闭服务器的收尾工作
+    if (stop){
+        // 销毁所有chanel
+        for (auto itr : chanelpool){
+            if (itr)
+                DelChanel(itr);
+        }
+        // 关闭epollfd
+        // close(epollfd);
     }
 }

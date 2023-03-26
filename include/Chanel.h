@@ -10,6 +10,7 @@
 #include "Timer.h"
 #include "EventLoop.h"
 #include "Httpdata.h"
+#include "others.h"
 
 class Timer;
 class EventLoop;
@@ -64,6 +65,9 @@ public:
 
     // 重置EPOLLONESHOT
     void Set_oneshot(){
+        if (fcntl(fd, F_GETFD) == -1 || fcntl(epollfd, F_GETFD) == -1){
+            return;
+        }
         events  = events | EPOLLONESHOT;
         Set_Epoll();
     }
@@ -74,27 +78,7 @@ public:
         Set_Epoll();
     }
 
-    void Set_Epoll(){
-        // 如果该文件描述符已经被关闭了，则不进行处理
-        // 由于在处理epoll请求的时候有删除epoll这一条
-        // 而删除之后还是在这个数组中，可能会导致bug
-        if (fcntl(fd, F_GETFD) == -1)
-            return;
-        epoll_event ev;
-        ev.data.fd = fd;
-        ev.events = events;
-        int ret = 0;
-        if (!is_events){
-            is_events = true;
-            ret = epoll_ctl(epollfd, EPOLL_CTL_ADD, fd, &ev);
-        }
-        else 
-            ret = epoll_ctl(epollfd, EPOLL_CTL_MOD, fd, &ev);
-        if (ret < 0){
-            perror("epoll_ctl");
-            return;
-        }
-    }
+    void Set_Epoll();
 
     void Set_events_out(bool isout);
 

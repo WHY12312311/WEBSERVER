@@ -27,9 +27,8 @@ SERVER::SERVER(int _port, int num_sub, ThreadPool* _tp, EventLoop* _ep){
 }
 
 SERVER::~SERVER(){
-    close(listenfd);
-    listen_ch->~Chanel();   // 这里是否需要先调用析构函数？
     delete listen_ch;
+    close(listenfd);
     // delete server应该是不需要的，因为这个地方相当于是main函数调用的，main函数来清除
 }
 
@@ -75,6 +74,8 @@ void SERVER::Stop_server(){
         itr->StopLoop();
     }
     main_loop->StopLoop();
+    // 关闭listenfd
+    main_loop->DelChanel(listen_ch);
 }
 
 // main reactor在接收到连接信号的时候，需要将新的连接分发给下面
@@ -84,7 +85,7 @@ void SERVER::Conn_handler(){
     struct sockaddr_in retaddr;
     socklen_t retlen = sizeof(retaddr);
     if ((connfd = accept(listenfd, (struct sockaddr*)&retaddr, &retlen)) < 0){
-        perror("accept");
+        Getlogger()->error("Socket accept error: {}", strerror(errno));
         exit(-1);
     }
 
@@ -119,15 +120,15 @@ void SERVER::Conn_handler(){
         bool isfull = false;
         std::string str("Connection is currently unavalable");
         Write_data(connfd, str, isfull);
-        std::cout << connfd << ": Max connection number!" << std::endl;
+        Getlogger()->warn("{}: Max connection number!", connfd);
         return;
     }
     
 
     // 输出连接信息
-    std::cout << connfd << ": The port of new connection is: " << ntohs(retaddr.sin_port) << std::endl;
-
+    Getlogger()->info("{}: The port of new connection is: {}", connfd, ntohs(retaddr.sin_port));
     auto newchanel = new Chanel(connfd, eventpool[idx]->Get_epollfd(), true, eventpool[idx].get());
+    
     // 构造函数中没有设置监听，所以要在这设置好监听再加入
     // ADD函数中有下面的语句，不需要在这指定了
     // newchanel->Set_events(EPOLLIN | EPOLLRDHUP | EPOLLHUP);
@@ -138,6 +139,6 @@ void SERVER::Conn_handler(){
 }
 
 void SERVER::Err_handler(){
-    perror("error handler:");
+    Getlogger()->error("Setver fatal error: {}", strerror(errno));
     exit(-1);
 }

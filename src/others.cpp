@@ -78,7 +78,7 @@ int Write_data(int fd, std::string& content, bool& isfull){
                 continue;
             }
             else {
-                perror("send");
+                Getlogger()->error("Send data error: {}", strerror(errno));
                 return -1;
             }
         }
@@ -128,13 +128,13 @@ int Read_data(int fd, std::string& read_buf, bool& is_conn){
                 continue;
             }
             else {
-                perror("Read_data");
+                Getlogger()->error("Read data error: {}", strerror(errno));
                 return -1;
             }
         }
         else if (curr_read == 0){
             is_conn = false;
-            std::cout << fd << " has disconnected........" << std::endl;
+            Getlogger()->info("{}: disconnected........", fd);
             break;
         }
         else {
@@ -149,14 +149,14 @@ int Read_data(int fd, std::string& read_buf, bool& is_conn){
 int bindNlisten(__uint32_t portnum){
     int listenfd;
     if ((listenfd = socket(AF_INET, SOCK_STREAM, 0)) < 0){
-        perror("socket");
-        return -1;
+        Getlogger()->error("Creat socket fd error: {}", strerror(errno));
+        exit(-1);
     }
-
+    std::cout << "listenfd: " << listenfd << std::endl;
     // 设置端口复用，注意：端口复用必须在bind之前设置！！！！
     int reuse = 1;
     if (setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &reuse, sizeof(reuse)) < 0){
-        perror("setsockopt");
+        Getlogger()->error("Set socket reuse error: {}", strerror(errno));
         exit(-1);
     }
 
@@ -167,12 +167,12 @@ int bindNlisten(__uint32_t portnum){
     addr.sin_addr.s_addr = INADDR_ANY;
     addr.sin_port = htons(portnum);
     if (bind(listenfd, (struct sockaddr*)&addr, sizeof(addr)) < 0){
-        perror("bind");
-        return -1;
+        Getlogger()->error("Socket bind error: {}", strerror(errno));
+        exit(-1);
     }
 
     if (listen(listenfd, GlobalValue::ListenQueue) < 0){
-        perror("listen");
+        Getlogger()->error("Socket listen error: {}", strerror(errno));
         return -1;
     }
 
@@ -203,7 +203,23 @@ void Sig_register(int signum, void(handler)(int)) {   // 需要注意函数指�
     sigemptyset(&act.sa_mask);
     act.sa_handler = handler;
     if (sigaction(signum, &act, NULL) == -1){
-        perror("sigaction");
+        Getlogger()->error("Sigaction register error: {}", strerror(errno));
         exit(-1);
     }
 }
+
+std::shared_ptr<spdlog::logger> Getlogger(std::string path){
+    try 
+    {
+        // 使用static关键字修饰logger局部变量，只会被初始化一次
+        static auto logger = spdlog::basic_logger_mt("server_logger", path);
+        return logger;
+    }
+    catch (const spdlog::spdlog_ex &ex)
+    {
+        std::cout << "Log init failed: " << ex.what() << std::endl;
+    }
+    return {};
+}
+
+

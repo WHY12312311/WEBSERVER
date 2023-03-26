@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir"
   "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch"
   "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test"
-  "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update"
 )
 
 # Per-language clean rules from dependency scanning.
